@@ -11,11 +11,11 @@
   "@doneButton": {
     "description": "用户指南中完成按钮的标签。"
   },
-  "useBeforeOnsetTitle": "在发作前使用",
+  "useBeforeOnsetTitle": "在有症状前使用",
   "@useBeforeOnsetTitle": {
     "description": "用户指南第一页的标题。"
   },
-  "useBeforeOnsetDescription": "在晕车症状发作前使用此应用程序。",
+  "useBeforeOnsetDescription": "请在有晕动症状前使用此应用程序。",
   "@useBeforeOnsetDescription": {
     "description": "用户指南第一页的描述。"
   },
@@ -23,7 +23,7 @@
   "@sameVolumeToEarsTitle": {
     "description": "用户指南第二页的标题。"
   },
-  "sameVolumeToEarsDescription": "确保双耳的音量相同。",
+  "sameVolumeToEarsDescription": "尽量确保双耳的音量相同。",
   "@sameVolumeToEarsDescription": {
     "description": "用户指南第二页的描述。"
   },
@@ -31,7 +31,7 @@
   "@listenForAMinuteTitle": {
     "description": "用户指南第三页的标题。"
   },
-  "listenForAMinuteDescription": "听大约一分钟以获得更好的效果。",
+  "listenForAMinuteDescription": "听音频大约一分钟以获得更好的效果。",
   "@listenForAMinuteDescription": {
     "description": "用户指南第三页的描述。"
   }
