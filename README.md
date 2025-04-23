@@ -1,16 +1,24 @@
-# motion_ease_tune
+<div align="center">
+    <br />
+    <img src="assets/icon/icon.png" alt="MotionEaseTune Logo" width="160" height="160" />
+    <h1>MotionEaseTune</h1>
+    <a href="https://github.com/BHznJNs/MotionEaseTune/releases">Install</a> |
+    <a href="https://github.com/BHznJNs/MotionEaseTune/issues">Feedback</a> | 
+    <br />
+    <br />
+</div>
 
-A new Flutter project.
+A simple application that can prevent you from motion sickness via 100Hz sound.
 
-## Getting Started
+## Usage
 
-This project is a starting point for a Flutter application.
+1. Just [download](https://github.com/BHznJNs/MotionEaseTune/releases) and open this application
+2. Use it before the onset of motion sickness symptoms
+3. Make sure the volume is the same for both ears
+4. Listen for about one minute
 
-A few resources to get you started if this is your first Flutter project:
+That's it!
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Reference
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness](https://doi.org/10.1265/ehpm.24-00247)
