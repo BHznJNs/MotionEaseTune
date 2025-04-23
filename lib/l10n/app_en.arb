@@ -1,0 +1,42 @@
+{
+  "motionEaseTuneTitle": "MotionEaseTune",
+  "@motionEaseTuneTitle": {
+    "description": "The title of the application."
+  },
+  "userGuideTitle": "User Guide",
+  "@userGuideTitle": {
+    "description": "The title of the user guide dialog."
+  },
+  "nextButton": "Next",
+  "@nextButton": {
+    "description": "Label for the next button in the user guide."
+  },
+  "doneButton": "Done",
+  "@doneButton": {
+    "description": "Label for the done button in the user guide."
+  },
+  "useBeforeOnsetTitle": "Use before onset",
+  "@useBeforeOnsetTitle": {
+    "description": "Title for the first page of the user guide."
+  },
+  "useBeforeOnsetDescription": "Use this app before the onset of motion sickness symptoms.",
+  "@useBeforeOnsetDescription": {
+    "description": "Description for the first page of the user guide."
+  },
+  "sameVolumeToEarsTitle": "Same volume to ears",
+  "@sameVolumeToEarsTitle": {
+    "description": "Title for the second page of the user guide."
+  },
+  "sameVolumeToEarsDescription": "Make sure the volume is the same for both ears.",
+  "@sameVolumeToEarsDescription": {
+    "description": "Description for the second page of the user guide."
+  },
+  "listenForAMinuteTitle": "Listen for a minute",
+  "@listenForAMinuteTitle": {
+    "description": "Title for the third page of the user guide."
+  },
+  "listenForAMinuteDescription": "Keep listening for about a minute for better results.",
+  "@listenForAMinuteDescription": {
+    "description": "Description for the third page of the user guide."
+  }
+}

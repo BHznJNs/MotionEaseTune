@@ -2,8 +2,10 @@ import 'dart:async';
 
 import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:motion_ease_tune/features/guide.dart';
 import 'package:motion_ease_tune/features/home/sine_wave.dart';
 import 'package:motion_ease_tune/features/home/sound_player.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -21,6 +23,17 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   @override
   void initState() {
     super.initState();
+
+    // if is first launch, show guide dialog
+    const isFirstLaunchKey = 'is-first-launch';
+    SharedPreferences.getInstance().then((prefs) {
+      bool? isFirstLaunch = prefs.getBool(isFirstLaunchKey);
+      if (isFirstLaunch == null || isFirstLaunch == true) {
+        prefs.setBool(isFirstLaunchKey, false);
+        if (mounted) openGuideDialog(context);
+      }
+    });
+
     _soundPlayer = SoundPlayer(this, 
       playingStateChanged: (value) {
         setState(() => _isPlaying = value);
@@ -93,10 +106,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         backgroundColor: Theme.of(context).colorScheme.primary,
         actions: [
           IconButton(
-            icon: const Icon(Icons.info),
-            onPressed: () {
-              // 
-            },
+            icon: const Icon(Icons.help),
+            onPressed: () => openGuideDialog(context),
           ),
           IconButton(
             icon: const Icon(Icons.settings),
