@@ -67,7 +67,7 @@ class _UserGuideDialogState extends State<UserGuideDialog> {
       scrollDirection: Axis.horizontal,
       controller: _pageController,
       onPageChanged: (index) => setState(() => _currentPageIndex = index),
-      children: <Widget>[
+      children: [
         _UserGuidePage(
           image: 'assets/guide/use-before-onset.png',
           title: AppLocalizations.of(context)!.useBeforeOnsetTitle,
@@ -129,29 +129,66 @@ class _UserGuidePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image.asset(
-          image,
-          fit: BoxFit.contain,
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+    final imageAsset = Image.asset(
+      image,
+      fit: BoxFit.contain,
+    );
+    final titleWidget = Text(
+      title,
+      style: TextStyle(fontSize: 24),
+    );
+    final descriptionWidget = Text(
+      description,
+      style: TextStyle(fontSize: 16),
+    );
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final availableHeight = constraints.maxHeight;
+        final availableWidth = constraints.maxWidth;
+        final shouldOverlayText = availableHeight < ((availableWidth * (4 / 3)) + 72);
+        if (shouldOverlayText) {
+          return Stack(
+            alignment: Alignment.bottomCenter,
             children: [
-              Text(
-                title,
-                style: TextStyle(fontSize: 24),
+              Positioned(
+                top: 0,
+                left: 0,
+                right: 0,
+                child: imageAsset,
               ),
-              Text(
-                description,
-                style: TextStyle(fontSize: 16),
+              Container(
+                width: double.infinity,
+                color: Theme.of(context).cardColor.withAlpha(210),
+                padding: const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 36),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    titleWidget,
+                    descriptionWidget,
+                  ],
+                ),
               ),
             ],
-          ),
-        ),
-      ],
+          );
+        } else {
+          return Column(
+            children: [
+              imageAsset,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    titleWidget,
+                    descriptionWidget,
+                  ],
+                ),
+              ),
+            ],
+          );
+        }
+      }
     );
   }
 }
