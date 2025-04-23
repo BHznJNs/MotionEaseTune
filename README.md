@@ -2,8 +2,9 @@
     <br />
     <img src="assets/icon/icon.png" alt="MotionEaseTune Logo" width="160" height="160" />
     <h1>MotionEaseTune</h1>
-    <a href="https://github.com/BHznJNs/MotionEaseTune/releases">Install</a> |
-    <a href="https://github.com/BHznJNs/MotionEaseTune/issues">Feedback</a> | 
+    <a href="README_zh.md">中文介绍</a> | 
+    <a href="https://github.com/BHznJNs/MotionEaseTune/releases">Install</a> | 
+    <a href="https://github.com/BHznJNs/MotionEaseTune/issues">Feedback</a>
     <br />
     <br />
 </div>
