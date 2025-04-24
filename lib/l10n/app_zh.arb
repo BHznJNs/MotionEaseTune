@@ -39,5 +39,35 @@
   "pleaseTurnUpVolume": "请先调高音量。",
   "@pleaseTurnUpVolume": {
     "description": "音量过低时显示的提示信息。"
-  }
+  },
+  "settingsAppBarTitle": "设置",
+  "applicationThemeSettingTitle": "应用主题",
+  "lightThemeOption": "浅色",
+  "darkThemeOption": "深色",
+  "systemThemeOption": "跟随系统",
+  "languagesSettingTitle": "语言",
+  "languagesAppBarTitle": "语言",
+  "systemLanguageOption": "跟随系统",
+  "aboutTitle": "关于",
+  "@aboutTitle": {
+    "description": "“关于”菜单项或按钮的标签。"
+  },
+  "aboutPageTitle": "关于应用",
+  "@aboutPageTitle": {
+    "description": "“关于”页面的标题。"
+  },
+  "aboutPageHomepage": "主页",
+  "@aboutPageHomepage": {"description": "关于页面主页链接的标签。"},
+  "aboutPageFeedback": "反馈",
+  "@aboutPageFeedback": {"description": "关于页面反馈链接的标签。"},
+  "aboutPageVersion": "版本：{version}",
+  "@aboutPageVersion": {"description": "关于页面的版本标签。{version} 是版本字符串。"},
+  "aboutPageThanksPrefix": "本应用的核心理念来源于",
+  "@aboutPageThanksPrefix": {"description": "关于页面致谢文本的前缀。"},
+  "aboutPageThanksResearch": "这项研究",
+  "@aboutPageThanksResearch": {"description": "关于页面研究链接的可点击文本。"},
+  "aboutPageThanksSuffix": "。",
+  "@aboutPageThanksSuffix": {"description": "关于页面致谢文本的后缀。"},
+  "aboutPageOpenUrlError": "无法打开链接",
+  "@aboutPageOpenUrlError": {"description": "关于页面打开链接失败时的错误信息。"}
 }

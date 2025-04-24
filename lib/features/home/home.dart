@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
+import 'package:motion_ease_tune/features/settings/settings.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:real_volume/real_volume.dart';
 import 'package:motion_ease_tune/l10n/app_localizations.dart';
@@ -81,7 +82,10 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       IconButton(
         icon: const Icon(Icons.settings),
         onPressed: () {
-          // 
+          Navigator.of(context).push(
+            MaterialPageRoute(builder:
+              (context) => const SettingsPage()),
+          );
         },
       ),
     ];

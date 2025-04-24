@@ -34,6 +34,7 @@ class _UserGuideDialogState extends State<UserGuideDialog> {
   }
 
   Widget page1Builder() {
+    final l10n = AppLocalizations.of(context)!;
     return Column(
       children: [
         Image.asset(
@@ -46,11 +47,11 @@ class _UserGuideDialogState extends State<UserGuideDialog> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                AppLocalizations.of(context)!.useBeforeOnsetTitle,
+                l10n.useBeforeOnsetTitle,
                 style: TextStyle(fontSize: 24),
               ),
               Text(
-                AppLocalizations.of(context)!.useBeforeOnsetDescription,
+                l10n.useBeforeOnsetDescription,
                 style: TextStyle(fontSize: 16),
               ),
             ],
@@ -62,6 +63,7 @@ class _UserGuideDialogState extends State<UserGuideDialog> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final isLastPage = _currentPageIndex == _itemCount - 1;
     final pageView = PageView(
       scrollDirection: Axis.horizontal,
@@ -70,23 +72,23 @@ class _UserGuideDialogState extends State<UserGuideDialog> {
       children: [
         _UserGuidePage(
           image: 'assets/guide/use-before-onset.png',
-          title: AppLocalizations.of(context)!.useBeforeOnsetTitle,
-          description: AppLocalizations.of(context)!.useBeforeOnsetDescription,
+          title: l10n.useBeforeOnsetTitle,
+          description: l10n.useBeforeOnsetDescription,
         ),
         _UserGuidePage(
           image: 'assets/guide/same-volume-to-ears.png',
-          title: AppLocalizations.of(context)!.sameVolumeToEarsTitle,
-          description: AppLocalizations.of(context)!.sameVolumeToEarsDescription,
+          title: l10n.sameVolumeToEarsTitle,
+          description: l10n.sameVolumeToEarsDescription,
         ),
         _UserGuidePage(
           image: 'assets/guide/listen-for-a-minute.png',
-          title: AppLocalizations.of(context)!.listenForAMinuteTitle,
-          description: AppLocalizations.of(context)!.listenForAMinuteDescription,
+          title: l10n.listenForAMinuteTitle,
+          description: l10n.listenForAMinuteDescription,
         ),
       ],
     );
     final nextButton = TextButton(
-      child: Text(AppLocalizations.of(context)!.nextButton),
+      child: Text(l10n.nextButton),
       onPressed: () {
         _pageController.nextPage(
           duration: Duration(milliseconds: 300),
@@ -95,7 +97,7 @@ class _UserGuideDialogState extends State<UserGuideDialog> {
       },
     );
     final doneButton = TextButton(
-      child: Text(AppLocalizations.of(context)!.doneButton),
+      child: Text(l10n.doneButton),
       onPressed: () {
         Navigator.of(context).pop();
       },
@@ -103,7 +105,7 @@ class _UserGuideDialogState extends State<UserGuideDialog> {
     return Dialog.fullscreen(
       child: Scaffold(
         appBar: AppBar(
-          title: Text(AppLocalizations.of(context)!.userGuideTitle),
+          title: Text(l10n.userGuideTitle),
           actions: [
             isLastPage
               ? doneButton

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:dynamic_color/dynamic_color.dart';
+import 'package:motion_ease_tune/providers/language_provider.dart';
+import 'package:provider/provider.dart';
 import 'package:motion_ease_tune/l10n/app_localizations.dart';
 import 'package:motion_ease_tune/features/home/home.dart';
+import 'package:motion_ease_tune/providers/theme_provider.dart';
 import 'package:motion_ease_tune/theme.dart';
 
 class AppEntry extends StatefulWidget {
@@ -13,6 +16,8 @@ class AppEntry extends StatefulWidget {
 class _AppEntryState extends State<AppEntry> {
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
+    final languageProvider = Provider.of<LanguageProvider>(context);
     return DynamicColorBuilder(
       builder: (ColorScheme? lightDynamic, ColorScheme? darkDynamic) {
         return MaterialApp(
@@ -23,6 +28,8 @@ class _AppEntryState extends State<AppEntry> {
           darkTheme: ThemeData(
             colorScheme: MaterialTheme.darkScheme(),
           ),
+          themeMode: themeProvider.themeMode,
+          locale: languageProvider.language.toLocale(),
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
           home: const HomePage(),
@@ -34,5 +41,12 @@ class _AppEntryState extends State<AppEntry> {
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const AppEntry());
+  final entry = MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_) => ThemeProvider()),
+      ChangeNotifierProvider(create: (_) => LanguageProvider()),
+    ],
+    child: const AppEntry(),
+  );
+  runApp(entry);
 }

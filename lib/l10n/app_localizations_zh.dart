@@ -37,4 +37,57 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get pleaseTurnUpVolume => '请先调高音量。';
+
+  @override
+  String get settingsAppBarTitle => '设置';
+
+  @override
+  String get applicationThemeSettingTitle => '应用主题';
+
+  @override
+  String get lightThemeOption => '浅色';
+
+  @override
+  String get darkThemeOption => '深色';
+
+  @override
+  String get systemThemeOption => '跟随系统';
+
+  @override
+  String get languagesSettingTitle => '语言';
+
+  @override
+  String get languagesAppBarTitle => '语言';
+
+  @override
+  String get systemLanguageOption => '跟随系统';
+
+  @override
+  String get aboutTitle => '关于';
+
+  @override
+  String get aboutPageTitle => '关于应用';
+
+  @override
+  String get aboutPageHomepage => '主页';
+
+  @override
+  String get aboutPageFeedback => '反馈';
+
+  @override
+  String aboutPageVersion(Object version) {
+    return '版本：$version';
+  }
+
+  @override
+  String get aboutPageThanksPrefix => '本应用的核心理念来源于';
+
+  @override
+  String get aboutPageThanksResearch => '这项研究';
+
+  @override
+  String get aboutPageThanksSuffix => '。';
+
+  @override
+  String get aboutPageOpenUrlError => '无法打开链接';
 }

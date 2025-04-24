@@ -154,6 +154,108 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Please turn up the volume first.'**
   String get pleaseTurnUpVolume;
+
+  /// No description provided for @settingsAppBarTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settingsAppBarTitle;
+
+  /// No description provided for @applicationThemeSettingTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Application theme'**
+  String get applicationThemeSettingTitle;
+
+  /// No description provided for @lightThemeOption.
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get lightThemeOption;
+
+  /// No description provided for @darkThemeOption.
+  ///
+  /// In en, this message translates to:
+  /// **'Dark'**
+  String get darkThemeOption;
+
+  /// No description provided for @systemThemeOption.
+  ///
+  /// In en, this message translates to:
+  /// **'System'**
+  String get systemThemeOption;
+
+  /// No description provided for @languagesSettingTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Languages'**
+  String get languagesSettingTitle;
+
+  /// No description provided for @languagesAppBarTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Languages'**
+  String get languagesAppBarTitle;
+
+  /// No description provided for @systemLanguageOption.
+  ///
+  /// In en, this message translates to:
+  /// **'System'**
+  String get systemLanguageOption;
+
+  /// No description provided for @aboutTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'About'**
+  String get aboutTitle;
+
+  /// No description provided for @aboutPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'About'**
+  String get aboutPageTitle;
+
+  /// Label for the homepage link in the about page.
+  ///
+  /// In en, this message translates to:
+  /// **'Homepage'**
+  String get aboutPageHomepage;
+
+  /// Label for the feedback link in the about page.
+  ///
+  /// In en, this message translates to:
+  /// **'Feedback'**
+  String get aboutPageFeedback;
+
+  /// Version label in the about page. {version} is the version string.
+  ///
+  /// In en, this message translates to:
+  /// **'Version: {version}'**
+  String aboutPageVersion(Object version);
+
+  /// Prefix for the thanks text in the about page.
+  ///
+  /// In en, this message translates to:
+  /// **'The core concept of this application is inspired by '**
+  String get aboutPageThanksPrefix;
+
+  /// Clickable text for the research link in the about page.
+  ///
+  /// In en, this message translates to:
+  /// **'this research'**
+  String get aboutPageThanksResearch;
+
+  /// Suffix for the thanks text in the about page.
+  ///
+  /// In en, this message translates to:
+  /// **'.'**
+  String get aboutPageThanksSuffix;
+
+  /// Error message when failing to open a link in the about page.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not open the link'**
+  String get aboutPageOpenUrlError;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

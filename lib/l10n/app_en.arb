@@ -39,5 +39,29 @@
   "pleaseTurnUpVolume": "Please turn up the volume first.",
   "@pleaseTurnUpVolume": {
     "description": "The message to display when the volume is too low."
-  }
+  },
+  "settingsAppBarTitle": "Settings",
+  "applicationThemeSettingTitle": "Application theme",
+  "lightThemeOption": "Light",
+  "darkThemeOption": "Dark",
+  "systemThemeOption": "System",
+  "languagesSettingTitle": "Languages",
+  "languagesAppBarTitle": "Languages",
+  "systemLanguageOption": "System",
+  "aboutTitle": "About",
+  "aboutPageTitle": "About",
+  "aboutPageHomepage": "Homepage",
+  "@aboutPageHomepage": {"description": "Label for the homepage link in the about page."},
+  "aboutPageFeedback": "Feedback",
+  "@aboutPageFeedback": {"description": "Label for the feedback link in the about page."},
+  "aboutPageVersion": "Version: {version}",
+  "@aboutPageVersion": {"description": "Version label in the about page. {version} is the version string."},
+  "aboutPageThanksPrefix": "The core concept of this application is inspired by ",
+  "@aboutPageThanksPrefix": {"description": "Prefix for the thanks text in the about page."},
+  "aboutPageThanksResearch": "this research",
+  "@aboutPageThanksResearch": {"description": "Clickable text for the research link in the about page."},
+  "aboutPageThanksSuffix": ".",
+  "@aboutPageThanksSuffix": {"description": "Suffix for the thanks text in the about page."},
+  "aboutPageOpenUrlError": "Could not open the link",
+  "@aboutPageOpenUrlError": {"description": "Error message when failing to open a link in the about page."}
 }
