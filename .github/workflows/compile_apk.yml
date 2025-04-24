@@ -49,6 +49,19 @@ jobs:
       - name: Dependencies
         working-directory: ${{ env.APK_BUILD_DIR }}
         run: flutter pub get
+      
+      - name: Decode Keystore
+        run: |
+          echo "${{ secrets.SIGNING_KEYSTORE }}" | base64 -d > android/app/my_app_release_key.jks
+        shell: bash
+
+      - name: Create Signing Properties
+        run: |
+          echo "storeFile=my_app_release_key.jks" > android/signing.properties
+          echo "storePassword=${{ secrets.SIGNING_KEYSTORE_PASSWORD }}" >> android/signing.properties
+          echo "keyAlias=${{ secrets.SIGNING_KEY_ALIAS }}" >> android/signing.properties
+          echo "keyPassword=${{ secrets.SIGNING_KEY_PASSWORD }}" >> android/signing.properties
+        shell: bash
 
       - name: Build APK
         working-directory: ${{ env.APK_BUILD_DIR }}
