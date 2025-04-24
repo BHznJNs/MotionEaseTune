@@ -1,7 +1,7 @@
 import java.util.Properties
 import java.io.FileInputStream
 
-val signingPropertiesFile = file("../signing.properties")
+val signingPropertiesFile = file("signing.properties")
 val signingProperties = Properties()
 
 if (signingPropertiesFile.exists()) {

@@ -57,10 +57,10 @@ jobs:
 
       - name: Create Signing Properties
         run: |
-          echo "storeFile=my_app_release_key.jks" > android/signing.properties
-          echo "storePassword=${{ secrets.SIGNING_KEYSTORE_PASSWORD }}" >> android/signing.properties
-          echo "keyAlias=${{ secrets.SIGNING_KEY_ALIAS }}" >> android/signing.properties
-          echo "keyPassword=${{ secrets.SIGNING_KEY_PASSWORD }}" >> android/signing.properties
+          echo "storeFile=my_app_release_key.jks" > android/app/signing.properties
+          echo "storePassword=${{ secrets.SIGNING_KEYSTORE_PASSWORD }}" >> android/app/signing.properties
+          echo "keyAlias=${{ secrets.SIGNING_KEY_ALIAS }}" >> android/app/signing.properties
+          echo "keyPassword=${{ secrets.SIGNING_KEY_PASSWORD }}" >> android/app/signing.properties
         shell: bash
 
       - name: Build APK
