@@ -1,8 +1,5 @@
 {
-  "motionEaseTuneTitle": "MotionEaseTune",
-  "@motionEaseTuneTitle": {
-    "description": "The title of the application."
-  },
+  "@@locale": "en",
   "userGuideTitle": "User Guide",
   "@userGuideTitle": {
     "description": "The title of the user guide dialog."
@@ -38,5 +35,9 @@
   "listenForAMinuteDescription": "Keep listening for about a minute for better results.",
   "@listenForAMinuteDescription": {
     "description": "Description for the third page of the user guide."
+  },
+  "pleaseTurnUpVolume": "Please turn up the volume first.",
+  "@pleaseTurnUpVolume": {
+    "description": "The message to display when the volume is too low."
   }
 }

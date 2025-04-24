@@ -1,4 +1,5 @@
 {
+  "@@locale": "zh",
   "userGuideTitle": "用户指南",
   "@userGuideTitle": {
     "description": "用户指南对话框的标题。"
@@ -34,5 +35,9 @@
   "listenForAMinuteDescription": "听音频大约一分钟以获得更好的效果。",
   "@listenForAMinuteDescription": {
     "description": "用户指南第三页的描述。"
+  },
+  "pleaseTurnUpVolume": "请先调高音量。",
+  "@pleaseTurnUpVolume": {
+    "description": "音量过低时显示的提示信息。"
   }
 }

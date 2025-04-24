@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:dynamic_color/dynamic_color.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:motion_ease_tune/l10n/app_localizations.dart';
 import 'package:motion_ease_tune/features/home/home.dart';
 import 'package:motion_ease_tune/theme.dart';
@@ -24,16 +23,8 @@ class _AppEntryState extends State<AppEntry> {
           darkTheme: ThemeData(
             colorScheme: MaterialTheme.darkScheme(),
           ),
-          localizationsDelegates: [
-            AppLocalizations.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-          ],
-          supportedLocales: [
-            Locale('en'),
-            Locale('zh', 'CN'),
-          ],
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
           home: const HomePage(),
         );
       },

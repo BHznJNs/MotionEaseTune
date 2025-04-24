@@ -9,9 +9,6 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
-  String get motionEaseTuneTitle => 'MotionEaseTune';
-
-  @override
   String get userGuideTitle => '用户指南';
 
   @override
@@ -37,4 +34,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get listenForAMinuteDescription => '听音频大约一分钟以获得更好的效果。';
+
+  @override
+  String get pleaseTurnUpVolume => '请先调高音量。';
 }

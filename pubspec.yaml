@@ -16,7 +16,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.3+4
+version: 1.0.4+5
 
 environment:
   sdk: ^3.7.2
@@ -31,20 +31,22 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+
+  audio_video_progress_bar: ^2.0.3
   dynamic_color: ^1.7.0
   flutter_sinusoidals_v2: ^0.2.3
-  audio_video_progress_bar: ^2.0.3
+  shared_preferences: ^2.5.3
   sound_generator:
     git:
       https://github.com/BHznJNs/sound_generator.git
+  real_volume: ^1.0.9
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  flutter_localizations:
-    sdk: flutter
-  intl: any
-  shared_preferences: ^2.5.3
 
 dev_dependencies:
   flutter_test:
@@ -70,29 +72,14 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/guide/
+  
+  fonts:
+    - family: ComicRelief
+      fonts:
+        - asset: assets/ComicRelief/ComicRelief-bold.ttf
 
-  # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/to/font-from-package
 flutter_launcher_icons:
   android: "ic_launcher"
   ios: false

@@ -1,11 +1,13 @@
 import 'dart:async';
 
-import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:real_volume/real_volume.dart';
+import 'package:motion_ease_tune/l10n/app_localizations.dart';
 import 'package:motion_ease_tune/features/guide.dart';
 import 'package:motion_ease_tune/features/home/sine_wave.dart';
 import 'package:motion_ease_tune/features/home/sound_player.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -71,6 +73,31 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 
   @override
   Widget build(BuildContext context) {
+    final actions = [
+      IconButton(
+        icon: const Icon(Icons.help),
+        onPressed: () => openGuideDialog(context),
+      ),
+      IconButton(
+        icon: const Icon(Icons.settings),
+        onPressed: () {
+          // 
+        },
+      ),
+    ];
+    final textStyle = TextStyle(
+      fontSize: 96,
+      fontFamily: 'ComicRelief',
+      color: Theme.of(context).colorScheme.primary,
+    );
+    final text100Hz = Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      spacing: 4,
+      children: [
+        Text('100', style: textStyle),
+        Text('Hz', style: textStyle),
+      ]
+    );
     final progress = Padding(
       padding: EdgeInsets.symmetric(horizontal: 32),
       child: ProgressBar(
@@ -84,11 +111,22 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         padding: EdgeInsets.all(12),
         elevation: 4,
       ),
-      onPressed: () {
+      onPressed: () async {
         if (_isPlaying) {
           _soundPlayer.stop();
           stopTimer();
         } else {
+          final currentVolume = (await RealVolume.getCurrentVol(StreamType.MUSIC)) ?? 0.0;
+          if (currentVolume <= 0.1) {
+            if (context.mounted) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(AppLocalizations.of(context)!.pleaseTurnUpVolume),
+                ),
+              );
+            }
+            return;
+          }
           _soundPlayer.play();
           startTimer();
         }
@@ -104,23 +142,16 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         title: const Text('MotionEaseTune'),
         foregroundColor: Theme.of(context).colorScheme.onPrimary,
         backgroundColor: Theme.of(context).colorScheme.primary,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.help),
-            onPressed: () => openGuideDialog(context),
-          ),
-          IconButton(
-            icon: const Icon(Icons.settings),
-            onPressed: () {
-              // 
-            },
-          ),
-        ],
+        actions: actions,
       ),
       body: Column(
         children: [
           SineWave(_isPlaying),
-          Expanded(child: Container()),
+          Expanded(
+            child: Center(
+              child: text100Hz,
+            )
+          ),
           progress,
           toggleButton,
           const SizedBox(height: 48),

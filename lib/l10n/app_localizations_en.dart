@@ -9,9 +9,6 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get motionEaseTuneTitle => 'MotionEaseTune';
-
-  @override
   String get userGuideTitle => 'User Guide';
 
   @override
@@ -37,4 +34,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get listenForAMinuteDescription => 'Keep listening for about a minute for better results.';
+
+  @override
+  String get pleaseTurnUpVolume => 'Please turn up the volume first.';
 }

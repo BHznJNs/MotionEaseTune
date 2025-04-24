@@ -95,12 +95,6 @@ abstract class AppLocalizations {
     Locale('zh')
   ];
 
-  /// The title of the application.
-  ///
-  /// In en, this message translates to:
-  /// **'MotionEaseTune'**
-  String get motionEaseTuneTitle;
-
   /// The title of the user guide dialog.
   ///
   /// In en, this message translates to:
@@ -154,6 +148,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Keep listening for about a minute for better results.'**
   String get listenForAMinuteDescription;
+
+  /// The message to display when the volume is too low.
+  ///
+  /// In en, this message translates to:
+  /// **'Please turn up the volume first.'**
+  String get pleaseTurnUpVolume;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

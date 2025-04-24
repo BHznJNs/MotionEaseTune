@@ -325,6 +325,14 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "6.0.2"
+  real_volume:
+    dependency: "direct main"
+    description:
+      name: real_volume
+      sha256: "77e7dfb900e1cb73f97b0cdbfd494b43a336dce5547245a9a827701079b09709"
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.9"
   shared_preferences:
     dependency: "direct main"
     description:
