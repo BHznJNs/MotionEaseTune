@@ -103,10 +103,11 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       ]
     );
     final progress = Padding(
-      padding: EdgeInsets.symmetric(horizontal: 32),
+      padding: const EdgeInsets.symmetric(horizontal: 32),
       child: ProgressBar(
-        total: Duration(seconds: 60),
+        total: const Duration(seconds: 60),
         progress: Duration(seconds: _progress),
+        thumbColor: Theme.of(context).colorScheme.secondary,
       ),
     );
     final toggleButton = ElevatedButton(

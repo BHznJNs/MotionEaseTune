@@ -18,22 +18,22 @@ class AppLocalizationsZh extends AppLocalizations {
   String get doneButton => '完成';
 
   @override
-  String get useBeforeOnsetTitle => '在有症状前使用';
+  String get useBeforeOnsetTitle => '在症状出现前使用';
 
   @override
-  String get useBeforeOnsetDescription => '请在有晕动症状前使用此应用程序。';
+  String get useBeforeOnsetDescription => '为了获得最佳效果，建议您在感觉到晕车症状之前使用本应用。';
 
   @override
-  String get sameVolumeToEarsTitle => '双耳音量相同';
+  String get sameVolumeToEarsTitle => '留意双耳音量';
 
   @override
-  String get sameVolumeToEarsDescription => '尽量确保双耳的音量相同。';
+  String get sameVolumeToEarsDescription => '为了获得最佳效果，请尽量让双耳听到的音量感觉一致。';
 
   @override
-  String get listenForAMinuteTitle => '听一分钟';
+  String get listenForAMinuteTitle => '聆听一分钟左右';
 
   @override
-  String get listenForAMinuteDescription => '听音频大约一分钟以获得更好的效果。';
+  String get listenForAMinuteDescription => '持续聆听音频一分钟，有助于达到更佳效果。';
 
   @override
   String get pleaseTurnUpVolume => '请先调高音量。';
