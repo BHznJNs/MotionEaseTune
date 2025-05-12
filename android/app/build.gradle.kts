@@ -49,7 +49,13 @@ android {
         versionName = flutter.versionName
     }
 
-    
+    dependenciesInfo {
+        // Disables dependency metadata when building APKs (for IzzyOnDroid/F-Droid)
+        includeInApk = false
+        // Disables dependency metadata when building Android App Bundles (for Google Play)
+        includeInBundle = false
+    }
+
     signingConfigs {
         create("release") {
             if (storeFileProp != null && storePasswordProp != null && keyAliasProp != null && keyPasswordProp != null) {
