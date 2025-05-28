@@ -20,6 +20,13 @@ A simple application that can prevent you from motion sickness via 100Hz sound.
 
 That's it!
 
+## Screenshots
+
+<img style="max-height: 100vh" src="./screenshots/main_view.jpg" />
+<img style="max-height: 100vh" src="./screenshots/user_guide_1.jpg" />
+<img style="max-height: 100vh" src="./screenshots/user_guide_2.jpg" />
+<img style="max-height: 100vh" src="./screenshots/user_guide_3.jpg" />
+
 ## Reference
 
 [Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness](https://doi.org/10.1265/ehpm.24-00247)
