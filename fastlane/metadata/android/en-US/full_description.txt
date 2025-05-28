@@ -1,0 +1,14 @@
+A simple application that can prevent you from motion sickness via 100Hz sound.
+
+## Usage
+
+1. Just download and open this application
+2. Use it before the onset of motion sickness symptoms
+3. Make sure the volume is the same for both ears
+4. Listen for about one minute
+
+That's it!
+
+## Reference
+
+<a href="https://doi.org/10.1265/ehpm.24-00247">Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness</a>

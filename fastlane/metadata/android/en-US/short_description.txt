@@ -1,0 +1,1 @@
+A simple application that can prevent you from motion sickness via 100Hz sound.
