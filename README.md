@@ -11,6 +11,8 @@
 
 A simple application that can prevent you from motion sickness via 100Hz sound.
 
+<a href="https://apt.izzysoft.de/packages/com.bhznjns.motion_ease_tune"><img src="./assets/IzzyOnDroid.png" height=80></a>
+
 ## Usage
 
 1. Just [download](https://github.com/BHznJNs/MotionEaseTune/releases) and open this application
